@@ -1,0 +1,19 @@
+name : test-workflow
+on:
+    push
+jobs:
+    runs-on: ubuntu-latest
+    ascii_job:
+        steps:
+        - name: checkout repo
+          uses: actions/checkout@v4
+
+        - name: install cowsay package
+          run: sudo apt install cowsay -y
+
+        - name: check is it installed
+          run: which cowsay
+
+        - name: print the ascii art
+          run: cowsay "Hello, World!"
+        
