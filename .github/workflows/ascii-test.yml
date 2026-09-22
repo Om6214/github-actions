@@ -11,7 +11,7 @@ jobs:
               run: sudo apt install cowsay -y
             
             - name: Print the ascii design
-              run: cowsay "Hello there! how you doin..." >> design.txt
+              run: cowsay -f elephant "An elephant never forgets." >> design.txt
 
             - name: Show the output
               run: cat design.txt
