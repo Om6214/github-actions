@@ -31,5 +31,9 @@ jobs:
               with:
                 name: ascii-design
                 path: ./design-ascii
+
+            - name: check the file
+              run: ls -lrth
+              
             - name: Show the ascii design
               run: cat design.txt
