@@ -1,0 +1,17 @@
+name: Ascii design workflow
+on:
+    push:
+        branches:
+            - main
+jobs:
+    Print_ascii_design:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download the cowsay package
+              run: sudo apt install cowsay -y
+            
+            - name: Print the ascii design
+              run: cowsay "Hello there! how you doin..." >> design.txt
+
+            - name: Show the output
+              run: cat design.txt
