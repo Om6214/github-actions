@@ -30,10 +30,9 @@ jobs:
               uses: actions/download-artifact@v8
               with:
                 name: ascii-design
-                path: ./design-ascii
+                path: .
 
             - name: check the file
               run: ls -lrth
 
-            - name: Show the ascii design
-              run: cat design-ascii
+            
