@@ -35,4 +35,5 @@ jobs:
             - name: check the file
               run: ls -lrth
 
-            
+            - name: print the design
+              run: cat ./design.txt
